@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鈴木行政書士事務所 | Kanzlei Suzuki - Gyoseishoshi Legal Office</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Noto Sans JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;750;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#dbeafe',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#d97706',
+                            600: '#b45309',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .transition-all {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Bilingual toggle helpers */
+        .lang-de { display: block; }
+        .lang-ja { display: none; }
+        
+        body.lang-mode-ja .lang-de { display: none; }
+        body.lang-mode-ja .lang-ja { display: block; }
+        
+        span.lang-de { display: inline; }
+        span.lang-ja { display: none; }
+        body.lang-mode-ja span.lang-de { display: none; }
+        body.lang-mode-ja span.lang-ja { display: inline; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans transition-colors duration-300">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="bg-navy-800 text-white p-2.5 rounded-lg group-hover:bg-gold-500 transition-all shadow-md">
+                    <i class="fa-solid fa-scale-balanced text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight tracking-wide text-navy-900">
+                        <span class="lang-de">Kanzlei Suzuki</span>
+                        <span class="lang-ja">鈴木行政書士事務所</span>
+                    </h1>
+                    <p class="text-xs text-slate-500">
+                        <span class="lang-de">Staatlich geprüfter Verwaltungsjurist & Immigration-Agent</span>
+                        <span class="lang-ja">申請取次行政書士・法務コンサルタント</span>
+                    </p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Items -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-sm font-semibold text-slate-600 hover:text-navy-800 transition-all">
+                    <span class="lang-de">Dienstleistungen</span><span class="lang-ja">業務内容</span>
+                </a>
+                <a href="#estimator" class="text-sm font-semibold text-slate-600 hover:text-navy-800 transition-all">
+                    <span class="lang-de">Gebührenrechner</span><span class="lang-ja">料金シミュレータ</span>
+                </a>
+                <a href="#profile" class="text-sm font-semibold text-slate-600 hover:text-navy-800 transition-all">
+                    <span class="lang-de">Über uns</span><span class="lang-ja">事務所概要</span>
+                </a>
+                <a href="#faq" class="text-sm font-semibold text-slate-600 hover:text-navy-800 transition-all">
+                    <span class="lang-de">FAQ</span><span class="lang-ja">よくある質問</span>
+                </a>
+            </nav>
+
+            <!-- Action buttons (Language switcher & Contact CTA) -->
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher Widget -->
+                <div class="bg-slate-100 p-1 rounded-full flex items-center shadow-inner">
+                    <button id="btn-lang-de" onclick="switchLanguage('de')" class="px-3 py-1 text-xs font-bold rounded-full transition-all">
+                        DE 🇩🇪
+                    </button>
+                    <button id="btn-lang-ja" onclick="switchLanguage('ja')" class="px-3 py-1 text-xs font-bold rounded-full transition-all">
+                        JP 🇯🇵
+                    </button>
+                </div>
+                
+                <a href="#contact" class="hidden sm:inline-flex items-center bg-navy-800 hover:bg-gold-500 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md hover:shadow-lg">
+                    <span class="lang-de">Beratung vereinbaren</span>
+                    <span class="lang-ja">無料相談はこちら</span>
+                    <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-navy-900 via-slate-900 to-navy-800 text-white overflow-hidden py-24 sm:py-32">
+        <div class="absolute inset-0 opacity-15">
+            <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-gold-500/20 text-gold-400 border border-gold-500/30">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-500 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-500"></span>
+                    </span>
+                    <span class="lang-de">Zweisprachige Rechtsbetreuung in Japan (Aichi & bundesweit)</span>
+                    <span class="lang-ja">英語・ドイツ語・日本語対応可能（愛知県から全国対応）</span>
+                </span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    <span class="lang-de">Ihr sicherer Weg durch Japans Behörden</span>
+                    <span class="lang-ja">日本でのビジネスと在留を、法律のプロが護る。</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-light">
+                    <span class="lang-de">Ob Visa-Angelegenheiten, Firmengründung oder spezielle behördliche Lizenzen in Japan – wir kümmern uns rechtssicher, effizient und transparent um Ihre Anträge.</span>
+                    <span class="lang-ja">ビザ取得、日本法人設立、各種許認可申請の代行から多言語契約書作成まで。行政手続きのあらゆる課題を迅速・誠実に解決いたします。</span>
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#services" class="bg-gold-500 hover:bg-gold-600 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:scale-105">
+                        <span class="lang-de">Unsere Leistungen</span>
+                        <span class="lang-ja">サービス一覧</span>
+                    </a>
+                    <a href="#estimator" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-8 py-4 rounded-xl transition-all shadow-md">
+                        <span class="lang-de">Gebühren schätzen</span>
+                        <span class="lang-ja">料金シミュレーション</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Features Sidebar (Hero Right) -->
+            <div class="lg:col-span-5 bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 space-y-6 shadow-xl">
+                <h3 class="text-xl font-bold text-gold-400 border-b border-white/10 pb-3">
+                    <span class="lang-de">Warum Kanzlei Suzuki?</span>
+                    <span class="lang-ja">当事務所の3つの強み</span>
+                </h3>
+                <div class="flex items-start gap-4">
+                    <div class="bg-gold-500/20 text-gold-400 p-3 rounded-lg"><i class="fa-solid fa-user-tie text-lg"></i></div>
+                    <div>
+                        <h4 class="font-bold text-white"><span class="lang-de">Erfahrung & Kompetenz</span><span class="lang-ja">豊富な実績と安心感</span></h4>
+                        <p class="text-sm text-slate-300"><span class="lang-de">Über 10 Jahre Erfahrung mit internationalen Klienten in Aichi und ganz Japan.</span><span class="lang-ja">愛知県をはじめ全国で、外国人・外資系企業のサポートに強みがあります。</span></p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-gold-500/20 text-gold-400 p-3 rounded-lg"><i class="fa-solid fa-language text-lg"></i></div>
+                    <div>
+                        <h4 class="font-bold text-white"><span class="lang-de">Keine Sprachbarrieren</span><span class="lang-ja">完全多言語（独・英・日）対応</span></h4>
+                        <p class="text-sm text-slate-300"><span class="lang-de">Direkte Kommunikation auf Deutsch oder Englisch ohne teure Übersetzer.</span><span class="lang-ja">翻訳を介さず直接ドイツ語・英語でのやり取りが可能なため、スピード解決が可能です。</span></p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-gold-500/20 text-gold-400 p-3 rounded-lg"><i class="fa-solid fa-bolt text-lg"></i></div>
+                    <div>
+                        <h4 class="font-bold text-white"><span class="lang-de">Transparente Preise</span><span class="lang-ja">明瞭な料金体系</span></h4>
+                        <p class="text-sm text-slate-300"><span class="lang-de">Feste Honorare und klare Aufschlüsselung aller anfallenden staatlichen Gebühren.</span><span class="lang-ja">事前見積もりの徹底で、追加請求などの不安を一切排除します。</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-amber-600 font-bold uppercase tracking-wider text-xs mb-2">
+            <span class="lang-de">Fachbereiche & Kompetenzen</span>
+            <span class="lang-ja">業務分野</span>
+        </h3>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">
+            <span class="lang-de">Unsere Dienstleistungen im Überblick</span>
+            <span class="lang-ja">行政書士としての専門業務</span>
+        </h2>
+        <div class="w-16 h-1 bg-gold-500 mx-auto mb-12 rounded-full"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Visa -->
+            <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 hover:border-navy-800/20 transition-all hover:-translate-y-2 flex flex-col justify-between text-left group">
+                <div>
+                    <div class="w-12 h-12 bg-blue-50 text-navy-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-800 group-hover:text-white transition-all shadow-inner">
+                        <i class="fa-solid fa-passport text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">
+                        <span class="lang-de">Visa & Aufenthaltsrecht</span>
+                        <span class="lang-ja">在留資格・ビザ申請代行</span>
+                    </h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        <span class="lang-de">Wir unterstützen Sie bei Arbeitsvisa, Ehegattenvisa, dauerhafter Aufenthaltserlaubnis (Permanent Residency) und Einbürgerungen.</span>
+                        <span class="lang-ja">就労ビザ、配偶者ビザ、永住権許可、帰化申請など、複雑な入国管理局への申請手続きをお客様に代わって一括対応いたします。</span>
+                    </p>
+                </div>
+                <a href="#contact" class="text-navy-800 font-bold text-sm flex items-center gap-2 hover:text-gold-500 transition-all">
+                    <span class="lang-de">Mehr erfahren</span><span class="lang-ja">詳しく見る</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+
+            <!-- Company -->
+            <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 hover:border-navy-800/20 transition-all hover:-translate-y-2 flex flex-col justify-between text-left group">
+                <div>
+                    <div class="w-12 h-12 bg-blue-50 text-navy-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-800 group-hover:text-white transition-all shadow-inner">
+                        <i class="fa-solid fa-building-columns text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">
+                        <span class="lang-de">Firmengründung in Japan</span>
+                        <span class="lang-ja">日本法人設立・起業支援</span>
+                    </h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        <span class="lang-de">Etablieren Sie Ihre Präsenz in Japan. Vollständige Vorbereitung der Gründungsunterlagen, Statuten (Teikan) und Eröffnung von Bankkonten.</span>
+                        <span class="lang-ja">株式会社や合同会社（LLC）の設立手続き、電子定款の作成から認証手続き、外国人起業家のための経営・管理ビザ取得までワンストップサポート。</span>
+                    </p>
+                </div>
+                <a href="#contact" class="text-navy-800 font-bold text-sm flex items-center gap-2 hover:text-gold-500 transition-all">
+                    <span class="lang-de">Mehr erfahren</span><span class="lang-ja">詳しく見る</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+
+            <!-- Licensing -->
+            <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 hover:border-navy-800/20 transition-all hover:-translate-y-2 flex flex-col justify-between text-left group">
+                <div>
+                    <div class="w-12 h-12 bg-blue-50 text-navy-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy-800 group-hover:text-white transition-all shadow-inner">
+                        <i class="fa-solid fa-file-signature text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">
+                        <span class="lang-de">Gewerbe- & Betriebslizenzen</span>
+                        <span class="lang-ja">営業許認可申請</span>
+                    </h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        <span class="lang-de">Einholung von Lizenzen für Gastronomie, Reisebüros, Immobilienhandel, Bauunternehmen und den Import/Export von Lebensmitteln.</span>
+                        <span class="lang-ja">飲食店営業許可、古物商、旅行業、建設業、宅建業など、事業を開始する上で必須となる許認可申請手続きをトータルに代行します。</span>
+                    </p>
+                </div>
+                <a href="#contact" class="text-navy-800 font-bold text-sm flex items-center gap-2 hover:text-gold-500 transition-all">
+                    <span class="lang-de">Mehr erfahren</span><span class="lang-ja">詳しく見る</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Fee Estimator Widget -->
+    <section id="estimator" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-gold-400 font-bold uppercase tracking-wider text-xs mb-2">
+                <span class="lang-de">Kostentransparenz</span>
+                <span class="lang-ja">事前見積もりの可視化</span>
+            </h3>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+                <span class="lang-de">Gebühren- & Kostensimulation</span>
+                <span class="lang-ja">簡単・料金シミュレータ</span>
+            </h2>
+            <p class="text-slate-400 text-sm mb-12 max-w-2xl mx-auto">
+                <span class="lang-de">Berechnen Sie unverbindlich die geschätzten Honorarkosten für Ihre geplanten Anträge. (Preise zzgl. gesetzlicher Umsatzsteuer und staatlicher Stempelgebühren).</span>
+                <span class="lang-ja">ご希望の業務プランをチェックするだけで、手続き費用の目安を瞬時にシミュレーションできます。（実費、消費税別）。</span>
+            </p>
+
+            <!-- Calculator Card -->
+            <div class="bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-10 shadow-2xl text-left">
+                <h4 class="text-xl font-bold mb-6 text-gold-400 border-b border-slate-700 pb-3">
+                    <span class="lang-de">1. Wählen Sie Ihre gewünschten Services:</span>
+                    <span class="lang-ja">1. ご希望のサポートを選択してください：</span>
+                </h4>
+                
+                <div class="space-y-4">
+                    <!-- Option 1 -->
+                    <label class="flex items-start sm:items-center gap-4 bg-slate-750 p-4 rounded-xl border border-slate-700 hover:border-slate-500 cursor-pointer transition-all">
+                        <input type="checkbox" value="120000" onchange="calculateFees()" class="estimator-item w-5 h-5 rounded border-slate-600 bg-slate-700 text-gold-500 focus:ring-gold-500 mt-1 sm:mt-0">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-white"><span class="lang-de">Arbeitsvisum / Aufenthaltstitel</span><span class="lang-ja">就労ビザ新規申請</span></span>
+                                <span class="text-gold-400 font-mono font-bold">¥120,000</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1"><span class="lang-de">Vollständige Prüfung der Qualifikationen, Erstellung aller Unterlagen & Behördengänge.</span><span class="lang-ja">証明書類の精査、申請書類一式の作成、入国管理局への取り次ぎ。</span></p>
+                        </div>
+                    </label>
+
+                    <!-- Option 2 -->
+                    <label class="flex items-start sm:items-center gap-4 bg-slate-750 p-4 rounded-xl border border-slate-700 hover:border-slate-500 cursor-pointer transition-all">
+                        <input type="checkbox" value="150000" onchange="calculateFees()" class="estimator-item w-5 h-5 rounded border-slate-600 bg-slate-700 text-gold-500 focus:ring-gold-500 mt-1 sm:mt-0">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-white"><span class="lang-de">Gründung einer Kabushiki-Gaisha (AG)</span><span class="lang-ja">株式会社設立フルサポート</span></span>
+                                <span class="text-gold-400 font-mono font-bold">¥150,000</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1"><span class="lang-de">Vorbereitung der Statuten, Beglaubigung per Notar, behördliche Einreichung.</span><span class="lang-ja">定款作成・公証役場での電子定款認証、登記準備一式を代行。</span></p>
+                        </div>
+                    </label>
+
+                    <!-- Option 3 -->
+                    <label class="flex items-start sm:items-center gap-4 bg-slate-750 p-4 rounded-xl border border-slate-700 hover:border-slate-500 cursor-pointer transition-all">
+                        <input type="checkbox" value="100000" onchange="calculateFees()" class="estimator-item w-5 h-5 rounded border-slate-600 bg-slate-700 text-gold-500 focus:ring-gold-500 mt-1 sm:mt-0">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-white"><span class="lang-de">Betriebslizenz (z.B. Gastronomie)</span><span class="lang-ja">飲食店営業許可・各種許認可申請</span></span>
+                                <span class="text-gold-400 font-mono font-bold">¥100,000</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1"><span class="lang-de">Begehungsvorbereitung, Ausarbeitung der Pläne & Begleitung zum Gesundheitsamt.</span><span class="lang-ja">図面の作成、事前相談の実施、保健所への同行調査等。</span></p>
+                        </div>
+                    </label>
+
+                    <!-- Option 4 -->
+                    <label class="flex items-start sm:items-center gap-4 bg-slate-750 p-4 rounded-xl border border-slate-700 hover:border-slate-500 cursor-pointer transition-all">
+                        <input type="checkbox" value="50000" onchange="calculateFees()" class="estimator-item w-5 h-5 rounded border-slate-600 bg-slate-700 text-gold-500 focus:ring-gold-500 mt-1 sm:mt-0">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-white"><span class="lang-de">Zweisprachiger Vertrag (De/En/Ja)</span><span class="lang-ja">多言語契約書作成・法務翻訳</span></span>
+                                <span class="text-gold-400 font-mono font-bold">¥50,000</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1"><span class="lang-de">Ausarbeitung rechtsgültiger Verträge oder Übersetzung geschäftlicher Kontrakte.</span><span class="lang-ja">業務委託、賃貸借、売買契約書等の作成及び翻訳（ドイツ語・英語）。</span></p>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Step 2: Extras -->
+                <h4 class="text-xl font-bold mt-10 mb-6 text-gold-400 border-b border-slate-700 pb-3">
+                    <span class="lang-de">2. Zusatzoptionen wählen:</span>
+                    <span class="lang-ja">2. 追加オプションを選択してください：</span>
+                </h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <label class="flex items-center gap-3 bg-slate-750 p-4 rounded-xl border border-slate-700 hover:border-slate-500 cursor-pointer transition-all">
+                        <input type="checkbox" id="opt-express" value="30000" onchange="calculateFees()" class="w-5 h-5 rounded border-slate-600 bg-slate-700 text-gold-500 focus:ring-gold-500">
+                        <div>
+                            <span class="font-bold text-white block text-sm"><span class="lang-de">Express-Bearbeitung</span><span class="lang-ja">特急スピード対応</span></span>
+                            <span class="text-xs text-slate-400">+¥30,000</span>
+                        </div>
+                    </label>
+                    <label class="flex items-center gap-3 bg-slate-750 p-4 rounded-xl border border-slate-700 hover:border-slate-500 cursor-pointer transition-all">
+                        <input type="checkbox" id="opt-translation" value="20000" onchange="calculateFees()" class="w-5 h-5 rounded border-slate-600 bg-slate-700 text-gold-500 focus:ring-gold-500">
+                        <div>
+                            <span class="font-bold text-white block text-sm"><span class="lang-de">Komplette Urkundenübersetzung</span><span class="lang-ja">翻訳文書の認証付き翻訳</span></span>
+                            <span class="text-xs text-slate-400">+¥20,000</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Calculation Result Section -->
+                <div class="mt-10 bg-navy-800 rounded-2xl p-6 border border-gold-500/20 flex flex-col sm:flex-row justify-between items-center gap-6">
+                    <div>
+                        <span class="text-slate-300 text-sm block uppercase font-bold tracking-wider"><span class="lang-de">Voraussichtlicher Paketpreis</span><span class="lang-ja">推定合計費用 (税抜)</span></span>
+                        <span id="estimated-total" class="text-4xl font-extrabold text-gold-400 font-mono mt-1 block">¥0</span>
+                    </div>
+                    <a href="#contact" onclick="populateContactFormWithEstimate()" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-white font-bold px-8 py-4 rounded-xl text-center transition-all shadow-md hover:scale-105">
+                        <span class="lang-de">Kostenvoranschlag anfordern</span>
+                        <span class="lang-ja">この内容で正式に見積もる</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile & Credentials Section -->
+    <section id="profile" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Image / Visual Area -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-gold-500/10 rounded-3xl -z-10 animate-pulse"></div>
+                    <div class="relative bg-gradient-to-br from-navy-800 to-slate-900 rounded-3xl p-8 text-center text-white overflow-hidden shadow-2xl border-4 border-white">
+                        <div class="w-40 h-40 bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center border border-white/25">
+                            <i class="fa-solid fa-user-tie text-7xl text-gold-400"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">鈴木 誠</h4>
+                        <p class="text-gold-400 text-sm font-semibold mt-1">Makoto Suzuki, LL.M.</p>
+                        <p class="text-xs text-slate-400 mt-2"><span class="lang-de">Zulassung: 愛知県行政書士会 第12345号</span><span class="lang-ja">愛知県行政書士会登録 第12345号</span></p>
+                        
+                        <div class="mt-6 flex justify-center gap-4 text-xs text-slate-300 border-t border-white/10 pt-4">
+                            <div><strong>10+</strong><br><span class="lang-de">Jahre Erfahrung</span><span class="lang-ja">実務経験</span></div>
+                            <div class="border-r border-white/10"></div>
+                            <div><strong>500+</strong><br><span class="lang-de">Erfolgreiche Fälle</span><span class="lang-ja">解決実績</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text / Biography Area -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-amber-600 font-bold uppercase tracking-wider text-xs">
+                        <span class="lang-de">Kanzleiinhaber & Vita</span>
+                        <span class="lang-ja">代表プロフィール</span>
+                    </h3>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900">
+                        <span class="lang-de">Verlässlich. Kompetent. Kundennah.</span>
+                        <span class="lang-ja">外国人実務のプロフェッショナル</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-gold-500 rounded-full"></div>
+                    <p class="text-slate-600 leading-relaxed">
+                        <span class="lang-de">Willkommen in unserer Kanzlei. Mein Name ist Makoto Suzuki. Als staatlich geprüfter und lizenzierter Gyoseishoshi helfe ich internationalen Privatpersonen sowie europäischen Firmen dabei, komplexe rechtliche bürokratische Hürden in Japan fehlerfrei zu nehmen. Durch mein Aufbaustudium des internationalen Wirtschaftsrechts kenne ich sowohl das japanische als auch das europäische Rechtssystem.</span>
+                        <span class="lang-ja">はじめまして、代表行政書士の鈴木です。当事務所は「外国人の日本での活躍とビジネス拡大」を最も得意とし、迅速な申請手続きを徹底しております。特にドイツ語圏・英語圏からの進出、新規起業をされる企業様より、実務経験と密な言語コミュニケーションを高く評価いただいております。複雑な申請は、すべて当事務所へお任せください。</span>
+                    </p>
+
+                    <!-- Accreditations & Badges -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-navy-900 mb-3"><span class="lang-de">Offizielle Qualifikationen</span><span class="lang-ja">保有資格・所属団体</span></h4>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-green-600"></i>
+                                <span class="lang-de">Eingetragener Agent für Einwanderungsbehörden (Immigration Bureau Certified)</span>
+                                <span class="lang-ja">名古屋出入国在留管理局届出済 申請取次行政書士</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-green-600"></i>
+                                <span class="lang-de">Mitglied der japanischen Föderation der Gyoseishoshi-Kammern</span>
+                                <span class="lang-ja">日本行政書士会連合会 所属</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-green-600"></i>
+                                <span class="lang-de">Master of Laws (LL.M.) im Wirtschaftsrecht</span>
+                                <span class="lang-ja">海外法科大学院（LL.M.）修了</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-amber-600 font-bold uppercase tracking-wider text-xs mb-2">
+                <span class="lang-de">Antworten & Klarheit</span>
+                <span class="lang-ja">よくあるご質問</span>
+            </h3>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">
+                <span class="lang-de">Häufig gestellte Fragen (FAQ)</span>
+                <span class="lang-ja">解決への第一歩に</span>
+            </h2>
+            <div class="w-16 h-1 bg-gold-500 mx-auto mb-12 rounded-full"></div>
+
+            <div class="space-y-4 text-left">
+                <!-- Question 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-1')" class="w-full px-6 py-5 flex justify-between items-center hover:bg-slate-50 transition-all">
+                        <span class="font-bold text-navy-900">
+                            <span class="lang-de">Was genau ist ein Gyoseishoshi?</span>
+                            <span class="lang-ja">行政書士とは何をする専門職ですか？</span>
+                        </span>
+                        <i id="faq-1-icon" class="fa-solid fa-chevron-down text-slate-400 transition-all"></i>
+                    </button>
+                    <div id="faq-1-ans" class="hidden px-6 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        <span class="lang-de">Ein Gyoseishoshi ist ein staatlich geprüfter, juristischer Beistand für Verwaltungsrecht in Japan. Wir verfassen offizielle Dokumente und Verträge und übermitteln diese rechtswirksam an Ministerien, die Polizei und das Einwanderungsamt. Für Ausländer und Firmen ist ein Gyoseishoshi der direkte Ansprechpartner, um behördliche Lizenzen und Aufenthaltstitel stressfrei zu erlangen.</span>
+                        <span class="lang-ja">行政書士は、官公署に提出する許認可申請書類の作成、および提出手続きの代理、権利義務や事実証明に関する書類（契約書など）の作成を行う国家資格者です。ビザや起業、各ビジネスライセンスのプロとして行政との橋渡しを行います。</span>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-2')" class="w-full px-6 py-5 flex justify-between items-center hover:bg-slate-50 transition-all">
+                        <span class="font-bold text-navy-900">
+                            <span class="lang-de">Muss ich für meinen Visaantrag selbst zum Einwanderungsamt?</span>
+                            <span class="lang-ja">ビザ申請の際、本人が入国管理局に出向く必要はありますか？</span>
+                        </span>
+                        <i id="faq-2-icon" class="fa-solid fa-chevron-down text-slate-400 transition-all"></i>
+                    </button>
+                    <div id="faq-2-ans" class="hidden px-6 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        <span class="lang-de">Nein. Wenn Sie uns beauftragen, müssen Sie sich nicht in die langen Warteschlangen am Einwanderungsamt stellen. Als staatlich zertifizierter "Application Agent" (申請取次) reichen wir alle Dokumente ein und holen Ihren fertigen Aufenthaltstitel direkt für Sie ab.</span>
+                        <span class="lang-ja">いいえ、ありません。申請取次資格を持つ行政書士が代理申請するため、お客様が入管に出向く必要はなく、待ち時間も発生いたしません。</span>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-3')" class="w-full px-6 py-5 flex justify-between items-center hover:bg-slate-50 transition-all">
+                        <span class="font-bold text-navy-900">
+                            <span class="lang-de">Wie hoch sind die behördlichen Stempelgebühren?</span>
+                            <span class="lang-ja">行政書士手数料以外に発生する実費（印紙代等）はどの程度ですか？</span>
+                        </span>
+                        <i id="faq-3-icon" class="fa-solid fa-chevron-down text-slate-400 transition-all"></i>
+                    </button>
+                    <div id="faq-3-ans" class="hidden px-6 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        <span class="lang-de">Das hängt von der konkreten Leistung ab. Bei einer Visa-Erteilung verlangt die Einwanderungsbehörde meist eine Steuergebühr (Stempelmarke) von 4.000 Yen. Bei der Gründung einer Aktiengesellschaft (K.K.) fallen gesetzlich festgesetzte Registrierungs- und Notargebühren von ca. 200.000 Yen an, die direkt an die Behörden gehen. Wir listen Ihnen all diese Kosten transparent vor Beginn auf.</span>
+                        <span class="lang-ja">主な法定実費として、ビザ変更・更新時の収入印紙代が4,000円。株式会社設立における登録免許税が15万円、定款の公証人手数料が約3万〜5万円などが必要です。これらは事前見積書にすべて明確に記載いたします。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-amber-600 font-bold uppercase tracking-wider text-xs mb-2">
+                    <span class="lang-de">Direkter Draht</span>
+                    <span class="lang-ja">お問い合わせ・無料相談</span>
+                </h3>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mb-4">
+                    <span class="lang-de">Nehmen Sie jetzt Kontakt auf</span>
+                    <span class="lang-ja">無料オンライン相談のご予約</span>
+                </h2>
+                <p class="text-slate-500 max-w-xl mx-auto text-sm">
+                    <span class="lang-de">Füllen Sie das untenstehende Formular aus. Unser Team meldet sich innerhalb von 24 Geschäftsstunden für ein kostenfreies Erstgespräch.</span>
+                    <span class="lang-ja">内容を確認の上、24時間以内に担当者よりご返信・日程調整の連絡をさせていただきます。</span>
+                </p>
+            </div>
+
+            <!-- Toast Success Message -->
+            <div id="success-toast" class="hidden bg-emerald-50 border border-emerald-300 rounded-2xl p-6 mb-8 flex items-start gap-4 shadow-md">
+                <div class="bg-emerald-500 text-white p-2 rounded-xl"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                <div>
+                    <h4 class="font-bold text-emerald-900"><span class="lang-de">Formular erfolgreich gesendet!</span><span class="lang-ja">送信が完了いたしました</span></h4>
+                    <p class="text-xs text-emerald-700 mt-1">
+                        <span class="lang-de">Wir bedanken uns für Ihr Vertrauen. Ein Rechtsberater wird sich zeitnah mit Ihnen in Verbindung setzen.</span>
+                        <span class="lang-ja">お問い合わせありがとうございます。内容を確認のうえ、担当行政書士より速やかにご連絡差し上げます。</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form onsubmit="handleFormSubmit(event)" class="space-y-6 bg-slate-50 border border-slate-100 p-8 sm:p-12 rounded-3xl shadow-sm">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="frm-name" class="block text-sm font-semibold text-slate-700 mb-2">
+                            <span class="lang-de">Vollständiger Name / Name des Unternehmens</span>
+                            <span class="lang-ja">お名前・貴社名 (必須)</span>
+                        </label>
+                        <input type="text" id="frm-name" required placeholder="z.B. Max Mustermann" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-navy-800 focus:ring-1 focus:ring-navy-800 transition-all">
+                    </div>
+                    <div>
+                        <label for="frm-email" class="block text-sm font-semibold text-slate-700 mb-2">
+                            <span class="lang-de">E-Mail-Adresse</span>
+                            <span class="lang-ja">メールアドレス (必須)</span>
+                        </label>
+                        <input type="email" id="frm-email" required placeholder="muster@beispiel.de" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-navy-800 focus:ring-1 focus:ring-navy-800 transition-all">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="frm-phone" class="block text-sm font-semibold text-slate-700 mb-2">
+                            <span class="lang-de">Telefonnummer (optional)</span>
+                            <span class="lang-ja">電話番号 (任意)</span>
+                        </label>
+                        <input type="tel" id="frm-phone" placeholder="+81 (0) 90 1234 5678" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-navy-800 focus:ring-1 focus:ring-navy-800 transition-all">
+                    </div>
+                    <div>
+                        <label for="frm-category" class="block text-sm font-semibold text-slate-700 mb-2">
+                            <span class="lang-de">Kategorie der Anfrage</span>
+                            <span class="lang-ja">ご相談カテゴリ (必須)</span>
+                        </label>
+                        <select id="frm-category" required class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-navy-800 focus:ring-1 focus:ring-navy-800 transition-all">
+                            <option value="visa">Visa & Aufenthaltsrecht / ビザ関連</option>
+                            <option value="incorporation">Firmengründung / 会社設立</option>
+                            <option value="licensing">Gewerbelizenzen / 営業許認可</option>
+                            <option value="contracts">Zweisprachige Verträge / 契約書作成</option>
+                            <option value="other">Sonstige Anfragen / その他</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="frm-message" class="block text-sm font-semibold text-slate-700 mb-2">
+                        <span class="lang-de">Details zu Ihrem Anliegen / Schätzungen</span>
+                        <span class="lang-ja">ご相談内容の概要 (必須)</span>
+                    </label>
+                    <textarea id="frm-message" rows="5" required placeholder="Schildern Sie kurz Ihren Fall..." class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-navy-800 focus:ring-1 focus:ring-navy-800 transition-all"></textarea>
+                </div>
+
+                <div class="flex items-start">
+                    <input type="checkbox" id="frm-terms" required class="w-5 h-5 rounded border-slate-300 text-gold-500 focus:ring-gold-500 mt-0.5">
+                    <label for="frm-terms" class="ml-3 text-xs text-slate-500 leading-normal">
+                        <span class="lang-de">Ich stimme zu, dass meine Daten zur Beantwortung meiner Kontaktanfrage gemäß den Datenschutzbestimmungen verarbeitet werden.</span>
+                        <span class="lang-ja">当事務所のプライバシーポリシー（個人情報の取り扱い）に同意した上で送信してください。</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-navy-800 hover:bg-gold-500 text-white font-bold py-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span class="lang-de">Formular sicher senden</span>
+                    <span class="lang-ja">同意してメッセージを送信</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- Brand Column -->
+            <div class="md:col-span-4 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white/10 text-gold-500 p-2 rounded-lg">
+                        <i class="fa-solid fa-scale-balanced text-lg"></i>
+                    </div>
+                    <span class="font-bold text-white tracking-wide"><span class="lang-de">Kanzlei Suzuki</span><span class="lang-ja">鈴木行政書士事務所</span></span>
+                </div>
+                <p class="text-xs leading-relaxed">
+                    <span class="lang-de">Professionelle administrative Rechtsunterstützung für globale Pioniere in Japan. Schnell, rechtssicher, zweisprachig.</span>
+                    <span class="lang-ja">愛知県を拠点に、海外進出企業・在日外国人の皆様の行政手続きと法務コンサルティングを支える専門事務所です。</span>
+                </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="#" class="text-slate-400 hover:text-white transition-all"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-all"><i class="fa-brands fa-square-x-twitter text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-all"><i class="fa-brands fa-facebook text-lg"></i></a>
+                </div>
+            </div>
+
+            <!-- Links Column -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="text-white font-semibold text-sm tracking-widest uppercase"><span class="lang-de">Schnelllinks</span><span class="lang-ja">リンク</span></h4>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <a href="#services" class="hover:text-white transition-all">
+                        <span class="lang-de">Dienstleistungen</span><span class="lang-ja">業務内容</span>
+                    </a>
+                    <a href="#estimator" class="hover:text-white transition-all">
+                        <span class="lang-de">Gebührenrechner</span><span class="lang-ja">料金シミュレーション</span>
+                    </a>
+                    <a href="#profile" class="hover:text-white transition-all">
+                        <span class="lang-de">Über uns</span><span class="lang-ja">事務所プロフィール</span>
+                    </a>
+                    <a href="#faq" class="hover:text-white transition-all">
+                        <span class="lang-de">FAQ</span><span class="lang-ja">よくある質問</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="text-white font-semibold text-sm tracking-widest uppercase"><span class="lang-de">Bürodaten</span><span class="lang-ja">事務所所在地</span></h4>
+                <p class="text-xs leading-relaxed text-slate-300">
+                    <strong>〒444-0864</strong><br>
+                    <span class="lang-de">Aichi-ken, Okazaki-shi, Myodaiji-cho (Nahe Bahnhof Okazaki)</span>
+                    <span class="lang-ja">愛知県岡崎市明大寺町（名鉄東岡崎駅 徒歩3分）</span>
+                </p>
+                <div class="text-xs text-slate-300 space-y-1">
+                    <p><i class="fa-solid fa-phone mr-2 text-gold-500"></i>0564-XX-XXXX (DE/JA/EN)</p>
+                    <p><i class="fa-solid fa-envelope mr-2 text-gold-500"></i>info@suzuki-gyosei-legal.jp</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <p>&copy; 2026 Kanzlei Suzuki. All Rights Reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-slate-300"><span class="lang-de">Datenschutz</span><span class="lang-ja">個人情報保護方針</span></a>
+                <a href="#" class="hover:text-slate-300"><span class="lang-de">Impressum</span><span class="lang-ja">特定商取引法に基づく表記</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Interactive Logic -->
+    <script>
+        // Core state for language toggle
+        let currentLanguage = 'de';
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            const body = document.body;
+            
+            const deBtn = document.getElementById('btn-lang-de');
+            const jaBtn = document.getElementById('btn-lang-ja');
+
+            if (lang === 'ja') {
+                body.classList.add('lang-mode-ja');
+                jaBtn.className = 'px-3 py-1 text-xs font-bold rounded-full transition-all bg-white text-navy-800 shadow-sm';
+                deBtn.className = 'px-3 py-1 text-xs font-bold rounded-full transition-all text-slate-500 hover:text-navy-800';
+            } else {
+                body.classList.remove('lang-mode-ja');
+                deBtn.className = 'px-3 py-1 text-xs font-bold rounded-full transition-all bg-white text-navy-800 shadow-sm';
+                jaBtn.className = 'px-3 py-1 text-xs font-bold rounded-full transition-all text-slate-500 hover:text-navy-800';
+            }
+            
+            // Save preference
+            localStorage.setItem('preferred_language', lang);
+            
+            // Recalculate fees to trigger correctly localized values
+            calculateFees();
+        }
+
+        // Live calculator formula
+        function calculateFees() {
+            let total = 0;
+            const items = document.querySelectorAll('.estimator-item');
+            
+            // Collect service values
+            items.forEach(item => {
+                if (item.checked) {
+                    total += parseInt(item.value);
+                }
+            });
+
+            // Add extras
+            const express = document.getElementById('opt-express');
+            if (express && express.checked) {
+                total += parseInt(express.value);
+            }
+
+            const translation = document.getElementById('opt-translation');
+            if (translation && translation.checked) {
+                total += parseInt(translation.value);
+            }
+
+            // Display formatted Japanese Yen
+            const totalDisplay = document.getElementById('estimated-total');
+            if (totalDisplay) {
+                totalDisplay.innerText = "¥" + total.toLocaleString('ja-JP');
+            }
+            
+            return total;
+        }
+
+        // Accordion utility
+        function toggleFaq(id) {
+            const ans = document.getElementById(id + '-ans');
+            const icon = document.getElementById(id + '-icon');
+            
+            if (ans && icon) {
+                const isHidden = ans.classList.contains('hidden');
+                
+                // Hide all FAQs first for clean UI
+                const allAnswers = document.querySelectorAll('[id$="-ans"]');
+                const allIcons = document.querySelectorAll('[id$="-icon"]');
+                allAnswers.forEach(el => el.classList.add('hidden'));
+                allIcons.forEach(el => {
+                    el.classList.remove('rotate-180');
+                    el.classList.add('fa-chevron-down');
+                });
+
+                if (isHidden) {
+                    ans.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                }
+            }
+        }
+
+        // Prefill contact form using calculation state
+        function populateContactFormWithEstimate() {
+            const total = calculateFees();
+            const txtarea = document.getElementById('frm-message');
+            if (txtarea && total > 0) {
+                if (currentLanguage === 'ja') {
+                    txtarea.value = `【料金シミュレーションお見積もり概算】\n推定合計費用: ¥${total.toLocaleString('ja-JP')}\n\nこちらのお見積内容で相談を希望します。詳しい手続きや必要書類について教えてください。`;
+                } else {
+                    txtarea.value = `[Kostenvoranschlag aus der Online-Simulation]\nGeschätzter Preis: ¥${total.toLocaleString('ja-JP')}\n\nIch interessiere mich für die oben ausgewählten Leistungen. Bitte kontaktieren Sie mich bezüglich der Details und Anforderungen.`;
+                }
+            }
+        }
+
+        // Form Submission intercept (Strictly avoiding standard alert)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const toast = document.getElementById('success-toast');
+            if (toast) {
+                toast.classList.remove('hidden');
+                toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            
+            // Clean up inputs elegantly
+            document.getElementById('frm-name').value = '';
+            document.getElementById('frm-email').value = '';
+            document.getElementById('frm-phone').value = '';
+            document.getElementById('frm-message').value = '';
+            document.getElementById('frm-terms').checked = false;
+        }
+
+        // Initialize state on window load
+        window.onload = function() {
+            const savedLanguage = localStorage.getItem('preferred_language') || 'de';
+            switchLanguage(savedLanguage);
+            calculateFees();
+        };
+    </script>
+</body>
+</html>
