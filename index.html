@@ -1,595 +1,605 @@
-<!-- Google Analytics (GA4) - Ersetze G-MESSID-HIER mit deiner echten ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MESSID-HIER"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鈴木行政書士事務所 | Suzuki Gyoseishoshi Legal Office</title>
+    
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX5FJ60GC0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  // Initialisiert das Tracking für deine Mess-ID
-  gtag('config', 'G-MESSID-HIER');
-</script>
+      // Initialisiert das Tracking für deine echte Mess-ID
+      gtag('config', 'G-YX5FJ60GC0');
+    </script>
 
-<!-- Tailwind CSS & FontAwesome Icons -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    primary: '#0f172a', // Deep Slate
-                    accent: '#b45309',  // Warm Amber
-                    accentHover: '#92400e',
-                    gold: '#d97706'
+    <!-- Tailwind CSS & FontAwesome Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', // Deep Slate
+                        accent: '#b45309',  // Warm Amber
+                        accentHover: '#92400e',
+                        gold: '#d97706'
+                    }
                 }
             }
         }
-    }
-</script>
-<style>
-    .lang-transition {
-        transition: all 0.3s ease-in-out;
-    }
-</style>
+    </script>
+    <style>
+        .lang-transition {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
-
-<!-- Header Navigation -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
-        <div class="flex items-center space-x-3">
-            <div class="bg-primary text-white p-2.5 rounded-lg shadow-md">
-                <i class="fa-solid fa-scale-balanced text-xl text-amber-500"></i>
-            </div>
-            <div>
-                <h1 class="text-xl font-bold text-primary tracking-wide" data-i18n="logo-title">鈴木行政書士事務所</h1>
-                <p class="text-xs text-slate-500 uppercase tracking-wider" data-i18n="logo-sub">Suzuki Gyoseishoshi Legal Office</p>
-            </div>
-        </div>
-        
-        <div class="flex items-center space-x-6 mt-3 sm:mt-0">
-            <nav class="hidden md:flex space-x-6 font-medium">
-                <a href="#services" class="hover:text-accent transition" data-i18n="nav-services">業務内容</a>
-                <a href="#calculator" class="hover:text-accent transition" data-i18n="nav-calc">料金シミュレーション</a>
-                <a href="#faq" class="hover:text-accent transition" data-i18n="nav-faq">よくある質問</a>
-                <a href="#about" class="hover:text-accent transition" data-i18n="nav-about">事務所概要</a>
-            </nav>
-
-            <!-- Language Switcher Button -->
-            <button onclick="toggleLanguage()" class="flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 py-1.5 px-3 rounded-full border border-slate-200 transition text-sm font-semibold">
-                <i class="fa-solid fa-globe text-accent"></i>
-                <span id="langBtnText">DE 🇩🇪</span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- Hero Section -->
-<section class="relative bg-gradient-to-r from-primary to-slate-900 text-white py-20 px-4 overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]"></div>
-    <div class="max-w-4xl mx-auto text-center relative z-10">
-        <span class="bg-accent/30 text-amber-400 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 inline-block border border-accent/20" data-i18n="hero-tag">ビザ・会社設立・行政手続きのプロ</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight" data-i18n="hero-title">日本での新たな一歩を、法律のプロが形にします。</h2>
-        <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto" data-i18n="hero-desc">複雑な日本の行政手続きを、安心・スムーズにサポート。英語・ドイツ語でのご相談も大歓迎です。</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#contact" class="bg-accent hover:bg-accentHover text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-0.5" data-i18n="hero-btn-primary">無料相談はこちら</a>
-            <a href="#services" class="bg-transparent hover:bg-white/10 text-white border border-white/30 font-semibold py-3 px-8 rounded-lg transition" data-i18n="hero-btn-secondary">サービス一覧</a>
-        </div>
-    </div>
-</section>
-
-<!-- Services Cards -->
-<section id="services" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-        <h3 class="text-3xl font-bold text-primary" data-i18n="services-title">主な取扱業務</h3>
-        <div class="w-16 h-1 bg-accent mx-auto mt-3"></div>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-accent">
-            <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-passport"></i></div>
-            <h4 class="text-xl font-bold mb-3 text-primary" data-i18n="service-1-title">在留資格・ビザ申請</h4>
-            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="service-1-desc">就労ビザ、配偶者ビザ、永住・帰化申請など、日本での生活やビジネスのための最適な滞在資格手続きをお手伝いします。</p>
-        </div>
-        
-        <!-- Card 2 -->
-        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-primary">
-            <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-building"></i></div>
-            <h4 class="text-xl font-bold mb-3 text-primary" data-i18n="service-2-title">法人設立・起業支援</h4>
-            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="service-2-desc">株式会社や合同会社の設立、定款の作成から、外国人起業家のための「経営・管理」ビザ取得まで網羅的に支援します。</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-slate-400">
-            <div class="text-slate-500 text-3xl mb-4"><i class="fa-solid fa-file-signature"></i></div>
-            <h4 class="text-xl font-bold mb-3 text-primary" data-i18n="service-3-title">営業許認可・契約書作成</h4>
-            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="service-3-desc">飲食店営業、建設業、古物商などの複雑なビジネスライセンス（許認可）取得申請や各種法的な契約書の作成を代行します。</p>
-        </div>
-    </div>
-</section>
-
-<!-- Interactive Fee Calculator -->
-<section id="calculator" class="bg-slate-100 py-16 px-4 border-y border-slate-200">
-    <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-            <h3 class="text-3xl font-bold text-primary" data-i18n="calc-title">お見積りシミュレーター</h3>
-            <p class="text-slate-500 mt-2 text-sm" data-i18n="calc-sub">ご希望のサービスを選択するだけで、概算費用がすぐに計算されます。</p>
-        </div>
-
-        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Checkboxes -->
-            <div class="space-y-4">
-                <h4 class="font-bold text-lg text-primary border-b pb-2" data-i18n="calc-header-options">手続きを選択してください</h4>
-                
-                <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
-                    <input type="checkbox" value="100000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
-                    <div>
-                        <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-1-title">在留資格申請（新規・変更）</p>
-                        <p class="text-xs text-slate-400" data-i18n="calc-opt-1-desc">¥100,000〜 / 約 650€〜</p>
-                    </div>
-                </label>
-
-                <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
-                    <input type="checkbox" value="150000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
-                    <div>
-                        <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-2-title">会社・法人設立サポート</p>
-                        <p class="text-xs text-slate-400" data-i18n="calc-opt-2-desc">¥150,000〜 / 約 950€〜</p>
-                    </div>
-                </label>
-
-                <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
-                    <input type="checkbox" value="80000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
-                    <div>
-                        <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-3-title">営業許認可（飲食店・古物商等）</p>
-                        <p class="text-xs text-slate-400" data-i18n="calc-opt-3-desc">¥80,000〜 / 約 500€〜</p>
-                    </div>
-                </label>
-
-                <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
-                    <input type="checkbox" id="consultationOpt" value="10000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
-                    <div>
-                        <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-4-title">個別対面・オンライン相談 (1時間)</p>
-                        <p class="text-xs text-slate-400" data-i18n="calc-opt-4-desc">¥10,000 / 約 65€</p>
-                    </div>
-                </label>
-            </div>
-
-            <!-- Result & Call to Action -->
-            <div class="bg-primary text-white p-6 rounded-xl flex flex-col justify-between">
-                <div>
-                    <h4 class="font-semibold text-sm text-slate-300 uppercase tracking-widest mb-2" data-i18n="calc-result-title">概算お見積り金額</h4>
-                    <div class="text-4xl font-extrabold text-amber-400 my-4">
-                        <span id="priceDisplay">¥0</span>
-                    </div>
-                    <p class="text-xs text-slate-400 leading-relaxed" data-i18n="calc-disclaimer">※上記は基本料金を元にしたシミュレーションです。案件の難易度や役所へ支払う手数料等によって変動する場合がございます。正式な見積もりは相談後に決定します。</p>
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-primary text-white p-2.5 rounded-lg shadow-md">
+                    <i class="fa-solid fa-scale-balanced text-xl text-amber-500"></i>
                 </div>
+                <div>
+                    <h1 class="text-xl font-bold text-primary tracking-wide" data-i18n="logo-title">鈴木行政書士事務所</h1>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider" data-i18n="logo-sub">Suzuki Gyoseishoshi Legal Office</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-6 mt-3 sm:mt-0">
+                <nav class="hidden md:flex space-x-6 font-medium">
+                    <a href="#services" class="hover:text-accent transition" data-i18n="nav-services">業務内容</a>
+                    <a href="#calculator" class="hover:text-accent transition" data-i18n="nav-calc">料金シミュレーション</a>
+                    <a href="#faq" class="hover:text-accent transition" data-i18n="nav-faq">よくある質問</a>
+                    <a href="#about" class="hover:text-accent transition" data-i18n="nav-about">事務所概要</a>
+                </nav>
 
-                <button onclick="applyEstimateToContact()" class="w-100 bg-accent hover:bg-accentHover text-white font-bold py-3 px-4 rounded-lg mt-6 transition text-center text-sm shadow-md block" data-i18n="calc-btn">
-                    この内容で問い合わせる
+                <!-- Language Switcher Button -->
+                <button onclick="toggleLanguage()" class="flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 py-1.5 px-3 rounded-full border border-slate-200 transition text-sm font-semibold">
+                    <i class="fa-solid fa-globe text-accent"></i>
+                    <span id="langBtnText">DE 🇩🇪</span>
                 </button>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- FAQ Section -->
-<section id="faq" class="max-w-4xl mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-        <h3 class="text-3xl font-bold text-primary" data-i18n="faq-title">よくあるご質問</h3>
-        <div class="w-16 h-1 bg-accent mx-auto mt-3"></div>
-    </div>
-
-    <div class="space-y-4">
-        <!-- FAQ 1 -->
-        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
-            <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-semibold flex justify-between items-center hover:bg-slate-50 transition text-primary">
-                <span data-i18n="faq-q1">相談時に英語やドイツ語での対応は可能ですか？</span>
-                <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-            </button>
-            <div id="faq-a-1" class="hidden p-5 border-t border-slate-100 text-slate-600 bg-slate-50 text-sm leading-relaxed" data-i18n="faq-a1">
-                はい、対応可能です。当事務所には英語およびドイツ語を話せる行政書士が在籍しており、面談から必要書類の作成、役所への提出まですべて外国語でフルサポートいたします。
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-primary to-slate-900 text-white py-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="bg-accent/30 text-amber-400 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 inline-block border border-accent/20" data-i18n="hero-tag">ビザ・会社設立・行政手続きのプロ</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight" data-i18n="hero-title">日本での新たな一歩を、法律のプロが形にします。</h2>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto" data-i18n="hero-desc">複雑な日本の行政手続きを、安心・スムーズにサポート。英語・ドイツ語でのご相談も大歓迎です。</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-accent hover:bg-accentHover text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-0.5" data-i18n="hero-btn-primary">無料相談はこちら</a>
+                <a href="#services" class="bg-transparent hover:bg-white/10 text-white border border-white/30 font-semibold py-3 px-8 rounded-lg transition" data-i18n="hero-btn-secondary">サービス一覧</a>
             </div>
         </div>
+    </section>
 
-        <!-- FAQ 2 -->
-        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
-            <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-semibold flex justify-between items-center hover:bg-slate-50 transition text-primary">
-                <span data-i18n="faq-q2">正式に依頼をする前に料金が発生しますか？</span>
-                <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-            </button>
-            <div id="faq-a-2" class="hidden p-5 border-t border-slate-100 text-slate-600 bg-slate-50 text-sm leading-relaxed" data-i18n="faq-a2">
-                いいえ、最初のメール問い合わせ、および初回30分までの無料相談には料金はかかりません。お客様のケースに合わせた見積もりを提示し、ご納得いただいてから正式契約となります。
-            </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
-            <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-semibold flex justify-between items-center hover:bg-slate-50 transition text-primary">
-                <span data-i18n="faq-q3">自分で一度不許可になったビザの再申請は可能ですか？</span>
-                <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-            </button>
-            <div id="faq-a-3" class="hidden p-5 border-t border-slate-100 text-slate-600 bg-slate-50 text-sm leading-relaxed" data-i18n="faq-a3">
-                はい、可能です。一度不入国管理局より出された「不許可通知」を持参いただき、不許可になった具体的な理由を分析した上で、修正・再申請計画を立てることが当事務所の強みです。
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Profile & About Section -->
-<section id="about" class="bg-white py-16 border-t border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-        <div class="md:col-span-1 text-center">
-            <div class="w-48 h-48 rounded-full border-4 border-slate-100 shadow-inner overflow-hidden mx-auto bg-slate-100 flex items-center justify-center">
-                <i class="fa-solid fa-user-tie text-7xl text-slate-400"></i>
-            </div>
-            <h4 class="text-xl font-bold mt-4 text-primary" data-i18n="profile-name">鈴木 誠</h4>
-            <p class="text-slate-500 text-xs" data-i18n="profile-title">代表行政書士 / 申請取次資格保有</p>
+    <!-- Services Cards -->
+    <section id="services" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-primary" data-i18n="services-title">主な取扱業務</h3>
+            <div class="w-16 h-1 bg-accent mx-auto mt-3"></div>
         </div>
         
-        <div class="md:col-span-2 space-y-4">
-            <h3 class="text-2xl font-bold text-primary" data-i18n="about-header">あなたの夢の実現を、行政のパートナーとして支えます。</h3>
-            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about-text-1">私は長年にわたり、日本国内外の個人事業主様や、日本で新たな生活をスタートさせようとしている数多くの外国人の方々の手続きを代行してきました。複雑な官公庁の書類は時間と精神を浪費させます。法律の専門知識を提供し、あなたが本来力を入れたい活動に集中できるようにするのが私の役目です。</p>
-            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about-text-2">日本への移住計画、起業プランなど、最初の一歩はとても大きな不安が伴います。まずはメールやオンラインでお気軽にお声がけください。誠心誠意、サポートさせていただきます。</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-accent">
+                <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-passport"></i></div>
+                <h4 class="text-xl font-bold mb-3 text-primary" data-i18n="service-1-title">在留資格・ビザ申請</h4>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="service-1-desc">就労ビザ、配偶者ビザ、永住・帰化申請など、日本での生活やビジネスのための最適な滞在資格手続きをお手伝いします。</p>
+            </div>
             
-            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100 text-sm">
-                <div>
-                    <span class="font-semibold block text-slate-500" data-i18n="about-meta-lang">対応可能言語</span>
-                    <span class="text-slate-800" data-i18n="about-meta-lang-val">日本語、英語、ドイツ語</span>
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-primary">
+                <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-building"></i></div>
+                <h4 class="text-xl font-bold mb-3 text-primary" data-i18n="service-2-title">法人設立・起業支援</h4>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="service-2-desc">株式会社や合同会社の設立、定款の作成から、外国人起業家のための「経営・管理」ビザ取得まで網羅的に支援します。</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-slate-400">
+                <div class="text-slate-500 text-3xl mb-4"><i class="fa-solid fa-file-signature"></i></div>
+                <h4 class="text-xl font-bold mb-3 text-primary" data-i18n="service-3-title">営業許認可・契約書作成</h4>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="service-3-desc">飲食店営業、建設業、古物商などの複雑なビジネスライセンス（許認可）取得申請や各種法的な契約書の作成を代行します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Fee Calculator -->
+    <section id="calculator" class="bg-slate-100 py-16 px-4 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-primary" data-i18n="calc-title">お見積りシミュレーター</h3>
+                <p class="text-slate-500 mt-2 text-sm" data-i18n="calc-sub">ご希望のサービスを選択するだけで、概算費用がすぐに計算されます。</p>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Checkboxes -->
+                <div class="space-y-4">
+                    <h4 class="font-bold text-lg text-primary border-b pb-2" data-i18n="calc-header-options">手続きを選択してください</h4>
+                    
+                    <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" value="100000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
+                        <div>
+                            <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-1-title">在留資格申請（新規・変更）</p>
+                            <p class="text-xs text-slate-400" data-i18n="calc-opt-1-desc">¥100,000〜 / 約 650€〜</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" value="150000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
+                        <div>
+                            <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-2-title">会社・法人設立サポート</p>
+                            <p class="text-xs text-slate-400" data-i18n="calc-opt-2-desc">¥150,000〜 / 約 950€〜</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" value="80000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
+                        <div>
+                            <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-3-title">営業許認可（飲食店・古物商等）</p>
+                            <p class="text-xs text-slate-400" data-i18n="calc-opt-3-desc">¥80,000〜 / 約 500€〜</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50 cursor-pointer transition">
+                        <input type="checkbox" id="consultationOpt" value="10000" onchange="calculateFee()" class="w-5 h-5 rounded text-accent focus:ring-accent accent-accent">
+                        <div>
+                            <p class="font-semibold text-sm text-slate-800" data-i18n="calc-opt-4-title">個別対面・オンライン相談 (1時間)</p>
+                            <p class="text-xs text-slate-400" data-i18n="calc-opt-4-desc">¥10,000 / 約 65€</p>
+                        </div>
+                    </label>
                 </div>
-                <div>
-                    <span class="font-semibold block text-slate-500" data-i18n="about-meta-assoc">所属団体</span>
-                    <span class="text-slate-800" data-i18n="about-meta-assoc-val">愛知県行政書士会 所属</span>
+
+                <!-- Result & Call to Action -->
+                <div class="bg-primary text-white p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-semibold text-sm text-slate-300 uppercase tracking-widest mb-2" data-i18n="calc-result-title">概算お見積り金額</h4>
+                        <div class="text-4xl font-extrabold text-amber-400 my-4">
+                            <span id="priceDisplay">¥0</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed" data-i18n="calc-disclaimer">※上記は基本料金を元にしたシミュレーションです。案件의 難易度や役所へ支払う手数料等によって変動する場合がございます。正式な見積もりは相談後に決定します。</p>
+                    </div>
+
+                    <button onclick="applyEstimateToContact()" class="w-100 bg-accent hover:bg-accentHover text-white font-bold py-3 px-4 rounded-lg mt-6 transition text-center text-sm shadow-md block" data-i18n="calc-btn">
+                        この内容で問い合わせる
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Form with Real-time Success Notification -->
-<section id="contact" class="max-w-2xl mx-auto px-4 py-16">
-    <div class="text-center mb-10">
-        <h3 class="text-3xl font-bold text-primary" data-i18n="contact-title">無料お気軽相談</h3>
-        <p class="text-slate-500 mt-2 text-sm" data-i18n="contact-sub">送信いただいたご相談内容に基づき、24時間以内に折り返しご連絡いたします。</p>
-    </div>
-
-    <!-- Custom Notification Alert -->
-    <div id="successAlert" class="hidden bg-emerald-50 border-l-4 border-emerald-500 text-emerald-800 p-4 rounded-r-lg mb-6 shadow-sm flex items-center space-x-3">
-        <i class="fa-solid fa-circle-check text-xl text-emerald-500"></i>
-        <div>
-            <p class="font-bold" data-i18n="alert-success-title">送信に成功しました！</p>
-            <p class="text-xs text-emerald-700" data-i18n="alert-success-desc">お問い合わせありがとうございます。内容を確認の上、速やかに担当者よりご連絡いたします。</p>
+    <!-- FAQ Section -->
+    <section id="faq" class="max-w-4xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-primary" data-i18n="faq-title">よくあるご質問</h3>
+            <div class="w-16 h-1 bg-accent mx-auto mt-3"></div>
         </div>
-    </div>
 
-    <form onsubmit="handleFormSubmit(event)" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6">
-        <div>
-            <label for="name" class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="form-name">お名前 (必須)</label>
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                    <i class="fa-solid fa-user"></i>
-                </span>
-                <input type="text" id="name" required class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:ring-accent focus:border-accent focus:outline-none transition text-sm">
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-semibold flex justify-between items-center hover:bg-slate-50 transition text-primary">
+                    <span data-i18n="faq-q1">相談時に英語やドイツ語での対応は可能ですか？</span>
+                    <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-a-1" class="hidden p-5 border-t border-slate-100 text-slate-600 bg-slate-50 text-sm leading-relaxed" data-i18n="faq-a1">
+                    はい、対応可能です。当事務所には英語およびドイツ語を話せる行政書士が在籍しており、面談から必要書類の作成、役所への提出まですべて外国語でフルサポートいたします。
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-semibold flex justify-between items-center hover:bg-slate-50 transition text-primary">
+                    <span data-i18n="faq-q2">正式に依頼をする前に料金が発生しますか？</span>
+                    <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-a-2" class="hidden p-5 border-t border-slate-100 text-slate-600 bg-slate-50 text-sm leading-relaxed" data-i18n="faq-a2">
+                    いいえ、最初のメール問い合わせ、および初回30分までの無料相談には料金はかかりません。お客様のケースに合わせた見積もりを提示し、ご納得いただいてから正式契約となります。
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-semibold flex justify-between items-center hover:bg-slate-50 transition text-primary">
+                    <span data-i18n="faq-q3">自分で一度不許可になったビザの再申請は可能ですか？</span>
+                    <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                </button>
+                <div id="faq-a-3" class="hidden p-5 border-t border-slate-100 text-slate-600 bg-slate-50 text-sm leading-relaxed" data-i18n="faq-a3">
+                    はい、可能です。一度入国管理局より出された「不許可通知」を持参いただき、不許可になった具体的な理由を分析した上で、修正・再申請計画を立てることが当事務所の強みです。
+                </div>
             </div>
         </div>
+    </section>
 
-        <div>
-            <label for="email" class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="form-email">メールアドレス (必須)</label>
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                    <i class="fa-solid fa-envelope"></i>
-                </span>
-                <input type="email" id="email" required class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:ring-accent focus:border-accent focus:outline-none transition text-sm">
+    <!-- Profile & About Section -->
+    <section id="about" class="bg-white py-16 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+            <div class="md:col-span-1 text-center">
+                <div class="w-48 h-48 rounded-full border-4 border-slate-100 shadow-inner overflow-hidden mx-auto bg-slate-100 flex items-center justify-center">
+                    <i class="fa-solid fa-user-tie text-7xl text-slate-400"></i>
+                </div>
+                <h4 class="text-xl font-bold mt-4 text-primary" data-i18n="profile-name">鈴木 誠</h4>
+                <p class="text-slate-500 text-xs" data-i18n="profile-title">代表行政書士 / 申請取次資格保有</p>
             </div>
-        </div>
-
-        <div>
-            <label for="message" class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="form-message">ご相談内容 (任意)</label>
-            <textarea id="message" rows="5" class="w-full p-4 rounded-lg border border-slate-300 focus:ring-accent focus:border-accent focus:outline-none transition text-sm" placeholder=""></textarea>
-        </div>
-
-        <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-bold py-3 px-6 rounded-lg shadow transition transform hover:-translate-y-0.5" data-i18n="form-submit">
-            メッセージを送信する
-        </button>
-    </form>
-</section>
-
-<!-- Footer Area -->
-<footer class="bg-primary text-slate-400 mt-auto pt-12 pb-6 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800 text-sm">
-        <div>
-            <div class="flex items-center space-x-2 text-white mb-4">
-                <i class="fa-solid fa-scale-balanced text-amber-500 text-lg"></i>
-                <span class="font-bold tracking-wide" data-i18n="logo-title">鈴木行政書士事務所</span>
-            </div>
-            <p class="text-xs text-slate-500 leading-relaxed" data-i18n="footer-desc">法令遵守と高い倫理観に基づき、安心の日本滞在、起業支援をお約束いたします。</p>
-        </div>
-        
-        <div class="space-y-2">
-            <span class="text-white font-semibold block mb-2" data-i18n="footer-contact-header">お問い合わせ先</span>
-            <p class="flex items-center space-x-2 text-xs">
-                <i class="fa-solid fa-phone text-accent"></i>
-                <span>0564-XX-XXXX</span>
-            </p>
-            <p class="flex items-center space-x-2 text-xs">
-                <i class="fa-solid fa-envelope text-accent"></i>
-                <span>info@suzuki-legal.example.com</span>
-            </p>
-        </div>
-
-        <div class="space-y-2">
-            <span class="text-white font-semibold block mb-2" data-i18n="footer-location-header">所在地</span>
-            <p class="text-xs">
-                〒444-XXXX<br>
-                愛知県岡崎市... (Okazaki, Aichi, Japan)
-            </p>
-        </div>
-    </div>
-    <div class="max-w-6xl mx-auto pt-6 text-center text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p>&copy; 2026 鈴木行政書士事務所. All Rights Reserved.</p>
-        <div class="flex space-x-4">
-            <a href="#" class="hover:text-slate-400">プライバシーポリシー (Privacy)</a>
-            <a href="#" class="hover:text-slate-400">免責事項 (Disclaimer)</a>
-        </div>
-    </div>
-</footer>
-
-<!-- Multilingual JavaScript Scripting -->
-<script>
-    // Default on-load language selection is ALWAYS Japanese ('ja') unless already manually toggled
-    let currentLang = localStorage.getItem('lang') || 'ja';
-
-    const dictionary = {
-        ja: {
-            "logo-title": "鈴木行政書士事務所",
-            "logo-sub": "Suzuki Gyoseishoshi Legal Office",
-            "nav-services": "業務内容",
-            "nav-calc": "料金シミュレーション",
-            "nav-faq": "よくある質問",
-            "nav-about": "事務所概要",
-            "hero-tag": "ビザ・会社設立・行政手続きのプロ",
-            "hero-title": "日本での新たな一歩を、法律のプロが形にします。",
-            "hero-desc": "複雑な日本の行政手続きを、安心・スムーズにサポート。英語・ドイツ語でのご相談も大歓迎です。",
-            "hero-btn-primary": "無料相談はこちら",
-            "hero-btn-secondary": "サービス一覧",
-            "services-title": "主な取扱業務",
-            "service-1-title": "在留資格・ビザ申請",
-            "service-1-desc": "就労ビザ、配偶者ビザ、永住・帰化申請など、日本での生活やビジネスのための最適な滞在資格手続きをお手伝いします。",
-            "service-2-title": "法人設立・起業支援",
-            "service-2-desc": "株式会社や合同会社の設立、定款の作成から、外国人起業家のための「経営・管理」ビザ取得まで網羅的に支援します。",
-            "service-3-title": "営業許認可・契約書作成",
-            "service-3-desc": "飲食店営業、建設業、古物商などの複雑なビジネスライセンス（許認可）取得申請や各種法的な契約書の作成を代行します。",
-            "calc-title": "お見積りシミュレーター",
-            "calc-sub": "ご希望のサービスを選択するだけで、概算費用がすぐに計算されます。",
-            "calc-header-options": "手続きを選択してください",
-            "calc-opt-1-title": "在留資格申請（新規・変更）",
-            "calc-opt-1-desc": "¥100,000〜 / 約 650€〜",
-            "calc-opt-2-title": "会社・法人設立サポート",
-            "calc-opt-2-desc": "¥150,000〜 / 約 950€〜",
-            "calc-opt-3-title": "営業許認可（飲食店・古物商等）",
-            "calc-opt-3-desc": "¥80,000〜 / 約 500€〜",
-            "calc-opt-4-title": "個別対面・オンライン相談 (1時間)",
-            "calc-opt-4-desc": "¥10,000 / 約 65€",
-            "calc-result-title": "概算お見積り金額",
-            "calc-disclaimer": "※上記は基本料金を元にしたシミュレーションです。案件の難易度や役所へ支払う手数料等によって変動する場合がございます。正式な見積もりは相談後に決定します。",
-            "calc-btn": "この内容で問い合わせる",
-            "faq-title": "よくあるご質問",
-            "faq-q1": "相談時に英語やドイツ語での対応は可能ですか？",
-            "faq-a1": "はい、対応可能です。当事務所には英語およびドイツ語を話せる行政書士が在籍しており、面談から必要書類の作成、役所への提出まですべて外国語でフルサポートいたします。",
-            "faq-q2": "正式に依頼をする前に料金が発生しますか？",
-            "faq-a2": "いいえ、最初のメール問い合わせ、および初回30分までの無料相談には料金はかかりません。お客様のケースに合わせた見積もりを提示し、ご納得いただいてから正式契約となります。",
-            "faq-q3": "自分で一度不許可になったビザの再申請は可能ですか？",
-            "faq-a3": "はい、可能です。一度不入国管理局より出された「不許可通知」を持参いただき、不許可になった具体的な理由を分析した上で、修正・再申請計画を立てることが当事務所の強みです。",
-            "profile-name": "鈴木 誠",
-            "profile-title": "代表行政書士 / 申請取次資格保有",
-            "about-header": "あなたの夢の実現を、行政のパートナーとして支えます。",
-            "about-text-1": "私は長年にわたり、日本国内外の個人事業主様や、日本で新たな生活をスタートさせようとしている数多くの外国人の方々の手続きを代行してきました。複雑な官公庁の書類は時間と精神を浪費させます。法律の専門知識を提供し、あなたが本来力を入れたい活動に集中できるようにするのが私の役目です。",
-            "about-text-2": "日本への移住計画、起業プランなど、最初の一歩はとても大きな不安が伴います。まずはメールやオンラインでお気軽にお声がけください。誠心誠意、サポートさせていただきます。",
-            "about-meta-lang": "対応可能言語",
-            "about-meta-lang-val": "日本語、英語、ドイツ語",
-            "about-meta-assoc": "所属団体",
-            "about-meta-assoc-val": "愛知県行政書士会 所属",
-            "contact-title": "無料お気軽相談",
-            "contact-sub": "送信いただいたご相談内容に基づき、24時間以内に折り返しご連絡いたします。",
-            "alert-success-title": "送信に成功しました！",
-            "alert-success-desc": "お問い合わせありがとうございます。内容を確認の上、速やかに担当者よりご連絡いたします。",
-            "form-name": "お名前 (必須)",
-            "form-email": "メールアドレス (必須)",
-            "form-message": "ご相談内容 (任意)",
-            "form-submit": "メッセージを送信する",
-            "footer-desc": "法令遵守と高い倫理観に基づき、安心の日本滞在、起業支援をお約束いたします。",
-            "footer-contact-header": "お問い合わせ先",
-            "footer-location-header": "所在地",
-            "form-placeholder": "ご相談になりたい手続きや、ご質問を詳しくご記入ください..."
-        },
-        de: {
-            "logo-title": "Anwaltskanzlei Suzuki",
-            "logo-sub": "Suzuki Staatlich Geprüfter Verwaltungsjurist",
-            "nav-services": "Dienstleistungen",
-            "nav-calc": "Gebührenrechner",
-            "nav-faq": "FAQ",
-            "nav-about": "Über uns",
-            "hero-tag": "Experte für Visum, Firmengründung & Behördengänge",
-            "hero-title": "Ihre Zukunft in Japan beginnt mit rechtlicher Sicherheit.",
-            "hero-desc": "Wir machen komplizierte Behördengänge in Japan einfach. Beratung auf Deutsch und Englisch.",
-            "hero-btn-primary": "Jetzt gratis beraten lassen",
-            "hero-btn-secondary": "Leistungen ansehen",
-            "services-title": "Unsere Kernbereiche",
-            "service-1-title": "Visum & Aufenthalt",
-            "service-1-desc": "Arbeitsvisum, Ehegattenvisum, Daueraufenthalt (PR) oder Einbürgerung. Wir begleiten Sie durch den gesamten Zuwanderungsprozess.",
-            "service-2-title": "Firmengründung in Japan",
-            "service-2-desc": "Erstellung von Statuten, Gründung von Kabushiki-Kaisha (AG) oder Godo-Kaisha (GmbH) sowie das Gründer-Visum.",
-            "service-3-title": "Gewerbelizenzen & Verträge",
-            "service-3-desc": "Beschaffung notwendiger Bewilligungen (Gastronomie, Bauwesen, etc.) und rechtssichere Vertragsgestaltung auf Japanisch/Englisch.",
-            "calc-title": "Online-Gebührenrechner",
-            "calc-sub": "Wählen Sie Ihre gewünschten Leistungen aus, um sofort eine grobe Kostenschätzung zu erhalten.",
-            "calc-header-options": "Verfahren auswählen",
-            "calc-opt-1-title": "Visumsantrag (Zuzug / Statuswechsel)",
-            "calc-opt-1-desc": "Ab ¥100.000 / ca. 650 €",
-            "calc-opt-2-title": "Firmengründung in Japan",
-            "calc-opt-2-desc": "Ab ¥150.000 / ca. 950 €",
-            "calc-opt-3-title": "Gewerbebewilligung (Gastronomie, etc.)",
-            "calc-opt-3-desc": "Ab ¥80.000 / ca. 500 €",
-            "calc-opt-4-title": "Erstberatung (Persönlich / Online, 1 Std.)",
-            "calc-opt-4-desc": "¥10.000 / ca. 65 €",
-            "calc-result-title": "Geschätzte Kosten",
-            "calc-disclaimer": "*Dies ist eine unverbindliche Kostenschätzung für die reinen Anwaltsgebühren. Je nach Einzelfall, behördlichen Abgaben oder Übersetzungskosten kann sich der Endpreis anpassen.",
-            "calc-btn": "Kostenvoranschlag anfordern",
-            "faq-title": "Häufig gestellte Fragen (FAQ)",
-            "faq-q1": "Können die Beratungen auch auf Deutsch durchgeführt werden?",
-            "faq-a1": "Ja, absolut. Unsere Juristen sprechen Deutsch und Englisch. Wir wickeln sämtlichen Schriftverkehr, die Übersetzung und die Koordination mit den Behörden für Sie in Ihrer Sprache ab.",
-            "faq-q2": "Fallen vor der eigentlichen Beauftragung Kosten an?",
-            "faq-a2": "Nein. Die Kontaktaufnahme per E-Mail sowie die ersten 30 Minuten der Erstberatung sind vollkommen kostenlos und unverbindlich. Erst nach Annahme des schriftlichen Angebots entstehen Gebühren.",
-            "faq-q3": "Helfen Sie mir, wenn mein Visumsantrag bereits abgelehnt wurde?",
-            "faq-a3": "Ja. Eine unserer Kernspezialisierungen ist die Analyse von Ablehnungsbescheiden. Wir korrigieren die Fehler, arbeiten eine Gegenbegründung aus und reichen einen neuen Antrag ein.",
-            "profile-name": "Makoto Suzuki",
-            "profile-title": "Verwaltungsjurist / Lizenzierter Visa-Agent",
-            "about-header": "Ihr Brückenkopf zu den japanischen Behörden.",
-            "about-text-1": "Seit vielen Jahren unterstütze ich internationale Unternehmer und Privatpersonen dabei, die Hürden der japanischen Bürokratie erfolgreich zu meistern. Die Anforderungen der Verwaltung sind extrem detailorientiert. Mein Ziel ist es, Ihnen diese Last abzunehmen, damit Sie sich voll auf Ihre Arbeit und Ihr Leben in Japan konzentrieren können.",
-            "about-text-2": "Eine Firmengründung oder ein Umzug nach Japan ist ein großes Abenteuer. Gerne berate ich Sie in einem ersten Zoom- oder Skype-Gespräch, um Unklarheiten im Vorfeld auszuräumen.",
-            "about-meta-lang": "Arbeitssprachen",
-            "about-meta-lang-val": "Japanisch, Englisch, Deutsch",
-            "about-meta-assoc": "Zulassung",
-            "about-meta-assoc-val": "Mitglied der Gyoseishoshi-Kammer Aichi",
-            "contact-title": "Kostenlose Erstberatung",
-            "contact-sub": "Schreiben Sie uns Ihr Anliegen. Wir antworten in der Regel innerhalb von 24 Stunden.",
-            "alert-success-title": "Nachricht erfolgreich gesendet!",
-            "alert-success-desc": "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich mit Ihnen in Verbindung setzen.",
-            "form-name": "Name (Pflichtfeld)",
-            "form-email": "E-Mail-Adresse (Pflichtfeld)",
-            "form-message": "Ihr Anliegen (Optional)",
-            "form-submit": "Anfrage absenden",
-            "footer-desc": "Professioneller Rechts- und Übersetzungsservice für Zuwanderung und Firmengründung in Japan.",
-            "footer-contact-header": "Kontakt",
-            "footer-location-header": "Standort",
-            "form-placeholder": "Beschreiben Sie kurz Ihr Vorhaben, z.B. welches Visum Sie benötigen oder welche Firma Sie gründen möchten..."
-        }
-    };
-
-    // Initialize elements based on active language
-    function renderLanguage() {
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (dictionary[currentLang][key]) {
-                element.innerHTML = dictionary[currentLang][key];
-            }
-        });
-
-        // Adjust language buttons text
-        const btnText = document.getElementById('langBtnText');
-        if (currentLang === 'ja') {
-            btnText.textContent = "DE 🇩🇪 / EN";
-            document.getElementById('message').placeholder = "ご相談になりたい手続きや、ご質問を詳しくご記入ください...";
-        } else {
-            btnText.textContent = "JP 🇯🇵";
-            document.getElementById('message').placeholder = "Beschreiben Sie kurz Ihr Vorhaben, z.B. welches Visum Sie benötigen...";
-        }
-
-        // Recalculate fees with current currency notation
-        calculateFee();
-    }
-
-    function toggleLanguage() {
-        currentLang = currentLang === 'ja' ? 'de' : 'ja';
-        localStorage.setItem('lang', currentLang);
-        renderLanguage();
-    }
-
-    // Accordion (FAQ) Logic
-    function toggleFaq(id) {
-        const answer = document.getElementById(`faq-a-${id}`);
-        const icon = document.getElementById(`faq-icon-${id}`);
-        
-        if (answer.classList.contains('hidden')) {
-            answer.classList.remove('hidden');
-            icon.classList.add('rotate-180');
-        } else {
-            answer.classList.add('hidden');
-            icon.classList.remove('rotate-180');
-        }
-    }
-
-    // Live Cost Estimator Pricing Calculator
-    function calculateFee() {
-        let total = 0;
-        const checkboxes = document.querySelectorAll('#calculator input[type="checkbox"]');
-        
-        checkboxes.forEach(box => {
-            if (box.checked) {
-                total += parseInt(box.value);
-            }
-        });
-
-        const priceDisplay = document.getElementById('priceDisplay');
-        if (currentLang === 'ja') {
-            priceDisplay.textContent = `¥${total.toLocaleString()}`;
-        } else {
-            // Converting JPY equivalent roughly to EUR for European audiences (e.g., 1 EUR ~ 150 JPY)
-            const eurEquivalent = Math.round(total / 150);
-            priceDisplay.textContent = `ca. ${eurEquivalent.toLocaleString()} € (¥${total.toLocaleString()})`;
-        }
-    }
-
-    // Copy calculated estimate into Contact form
-    function applyEstimateToContact() {
-        const checkboxes = document.querySelectorAll('#calculator input[type="checkbox"]');
-        let selectedServices = [];
-        
-        checkboxes.forEach(box => {
-            if (box.checked) {
-                // Match visual text description
-                const labelText = box.nextElementSibling.querySelector('p').textContent;
-                selectedServices.push(labelText);
-            }
-        });
-
-        const messageTextarea = document.getElementById('message');
-        if (selectedServices.length > 0) {
-            if (currentLang === 'ja') {
-                messageTextarea.value = `【シミュレーターからの見積もり依頼】\n選択した手続き:\n- ${selectedServices.join('\n- ')}\n\n【詳細事項】\n`;
-            } else {
-                messageTextarea.value = `[Anfrage über Online-Gebührenrechner]\nAusgewählte Services:\n- ${selectedServices.join('\n- ')}\n\n[Details / Sonstiges]:\n`;
-            }
             
-            // Focus user automatically on the form
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            messageTextarea.focus();
-        } else {
-            alert(currentLang === 'ja' ? '手続きを1つ以上選択してください。' : 'Bitte wählen Sie mindestens ein Verfahren aus.');
-        }
-    }
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-2xl font-bold text-primary" data-i18n="about-header">あなたの夢の実現を、行政のパートナーとして支えます。</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about-text-1">私は長年にわたり、日本国内外の個人事業主様や、日本で新たな生活をスタートさせようとしている数多くの外国人の方々の手続きを代行してきました。複雑な官公庁の書類は時間と精神を浪費させます。法律の専門知識を提供し、あなたが本来力を入れたい活動に集中できるようにするのが私の役目です。</p>
+                <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about-text-2">日本への移住計画、起業プランなど、最初の一歩はとても大きな不安が伴います。まずはメールやオンラインでお気軽にお声がけください。誠心誠意、サポートさせていただきます。</p>
+                
+                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100 text-sm">
+                    <div>
+                        <span class="font-semibold block text-slate-500" data-i18n="about-meta-lang">対応可能言語</span>
+                        <span class="text-slate-800" data-i18n="about-meta-lang-val">日本語、英語、ドイツ語</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold block text-slate-500" data-i18n="about-meta-assoc">所属団体</span>
+                        <span class="text-slate-800" data-i18n="about-meta-assoc-val">愛知県行政書士会 所属</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Form Submit handler
-    function handleFormSubmit(e) {
-        e.preventDefault();
-        
-        // Show alert box
-        const alertBox = document.getElementById('successAlert');
-        alertBox.classList.remove('hidden');
-        
-        // Scroll smoothly to success alert
-        alertBox.scrollIntoView({ behavior: 'smooth' });
+    <!-- Contact Form with Real-time Success Notification -->
+    <section id="contact" class="max-w-2xl mx-auto px-4 py-16">
+        <div class="text-center mb-10">
+            <h3 class="text-3xl font-bold text-primary" data-i18n="contact-title">無料お気軽相談</h3>
+            <p class="text-slate-500 mt-2 text-sm" data-i18n="contact-sub">送信いただいたご相談内容に基づき、24時間以内に折り返しご連絡いたします。</p>
+        </div>
 
-        // Tracking event custom trigger in Google Analytics
-        if (typeof gtag === 'function') {
-            gtag('event', 'contact_form_submission', {
-                'language': currentLang,
-                'estimate_value': document.getElementById('priceDisplay').textContent
+        <!-- Custom Notification Alert -->
+        <div id="successAlert" class="hidden bg-emerald-50 border-l-4 border-emerald-500 text-emerald-800 p-4 rounded-r-lg mb-6 shadow-sm flex items-center space-x-3">
+            <i class="fa-solid fa-circle-check text-xl text-emerald-500"></i>
+            <div>
+                <p class="font-bold" data-i18n="alert-success-title">送信に成功しました！</p>
+                <p class="text-xs text-emerald-700" data-i18n="alert-success-desc">お問い合わせありがとうございます。内容を確認の上、速やかに担当者よりご連絡いたします。</p>
+            </div>
+        </div>
+
+        <form onsubmit="handleFormSubmit(event)" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6">
+            <div>
+                <label for="name" class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="form-name">お名前 (必須)</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input type="text" id="name" required class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:ring-accent focus:border-accent focus:outline-none transition text-sm">
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="form-email">メールアドレス (必須)</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <input type="email" id="email" required class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:ring-accent focus:border-accent focus:outline-none transition text-sm">
+                </div>
+            </div>
+
+            <div>
+                <label for="message" class="block text-sm font-semibold text-slate-700 mb-2" data-i18n="form-message">ご相談内容 (任意)</label>
+                <textarea id="message" rows="5" class="w-full p-4 rounded-lg border border-slate-300 focus:ring-accent focus:border-accent focus:outline-none transition text-sm" placeholder=""></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-bold py-3 px-6 rounded-lg shadow transition transform hover:-translate-y-0.5" data-i18n="form-submit">
+                メッセージを送信する
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="bg-primary text-slate-400 mt-auto pt-12 pb-6 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800 text-sm">
+            <div>
+                <div class="flex items-center space-x-2 text-white mb-4">
+                    <i class="fa-solid fa-scale-balanced text-amber-500 text-lg"></i>
+                    <span class="font-bold tracking-wide" data-i18n="logo-title">鈴木行政書士事務所</span>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed" data-i18n="footer-desc">法令遵守と高い倫理観に基づき、安心の日本滞在、起業支援をお約束いたします。</p>
+            </div>
+            
+            <div class="space-y-2">
+                <span class="text-white font-semibold block mb-2" data-i18n="footer-contact-header">お問い合わせ先</span>
+                <p class="flex items-center space-x-2 text-xs">
+                    <i class="fa-solid fa-phone text-accent"></i>
+                    <span>0564-XX-XXXX</span>
+                </p>
+                <p class="flex items-center space-x-2 text-xs">
+                    <i class="fa-solid fa-envelope text-accent"></i>
+                    <span>info@suzuki-legal.example.com</span>
+                </p>
+            </div>
+
+            <div class="space-y-2">
+                <span class="text-white font-semibold block mb-2" data-i18n="footer-location-header">所在地</span>
+                <p class="text-xs">
+                    〒444-XXXX<br>
+                    愛知県岡崎市... (Okazaki, Aichi, Japan)
+                </p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto pt-6 text-center text-xs text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 鈴木行政書士事務所. All Rights Reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-slate-400">プライバシーポリシー (Privacy)</a>
+                <a href="#" class="hover:text-slate-400">免責事項 (Disclaimer)</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Multilingual JavaScript Scripting -->
+    <script>
+        // Default on-load language selection is Japanese ('ja')
+        let currentLang = localStorage.getItem('lang') || 'ja';
+
+        const dictionary = {
+            ja: {
+                "logo-title": "鈴木行政書士事務所",
+                "logo-sub": "Suzuki Gyoseishoshi Legal Office",
+                "nav-services": "業務内容",
+                "nav-calc": "料金シミュレーション",
+                "nav-faq": "よくある質問",
+                "nav-about": "事務所概要",
+                "hero-tag": "ビザ・会社設立・行政手続きのプロ",
+                "hero-title": "日本での新たな一歩を、法律のプロが形にします。",
+                "hero-desc": "複雑な日本の行政手続きを、安心・スムーズにサポート。英語・ドイツ語でのご相談も大歓迎です。",
+                "hero-btn-primary": "無料相談はこちら",
+                "hero-btn-secondary": "サービス一覧",
+                "services-title": "主な取扱業務",
+                "service-1-title": "在留資格・ビザ申請",
+                "service-1-desc": "就労ビザ、配偶者ビザ、永住・帰化申請など、日本での生活やビジネスのための最適な滞在資格手続きをお手伝いします。",
+                "service-2-title": "法人設立・起業支援",
+                "service-2-desc": "株式会社や合同会社の設立、定款の作成から、外国人起業家のための「経営・管理」ビザ取得まで網羅的に支援します。",
+                "service-3-title": "営業許認可・契約書作成",
+                "service-3-desc": "飲食店営業、建設業、古物商などの複雑なビジネスライセンス（許認可）取得申請や各種法的な契約書の作成を代行します。",
+                "calc-title": "お見積りシミュレーター",
+                "calc-sub": "ご希望のサービスを選択するだけで、概算費用がすぐに計算されます。",
+                "calc-header-options": "手続きを選択してください",
+                "calc-opt-1-title": "在留資格申請（新規・変更）",
+                "calc-opt-1-desc": "¥100,000〜 / 約 650€〜",
+                "calc-opt-2-title": "会社・法人設立サポート",
+                "calc-opt-2-desc": "¥150,000〜 / 約 950€〜",
+                "calc-opt-3-title": "営業許認可（飲食店・古物商等）",
+                "calc-opt-3-desc": "¥80,000〜 / 約 500€〜",
+                "calc-opt-4-title": "個別対面・オンライン相談 (1時間)",
+                "calc-opt-4-desc": "¥10,000 / 約 65€",
+                "calc-result-title": "概算お見積り金額",
+                "calc-disclaimer": "※上記は基本料金を元にしたシミュレーションです。案件の難易度や役所へ支払う手数料等によって変動する場合がございます。正式な見積もりは相談後に決定します。",
+                "calc-btn": "この内容で問い合わせる",
+                "faq-title": "よくあるご質問",
+                "faq-q1": "相談時に英語やドイツ語での対応は可能ですか？",
+                "faq-a1": "はい、対応可能です。当事務所には英語およびドイツ語を話せる行政書士が在籍しており、面談から必要書類の作成、役所への提出まですべて外国語でフルサポートいたします。",
+                "faq-q2": "正式に依頼をする前に料金が発生しますか？",
+                "faq-a2": "いいえ、最初のメール問い合わせ、および初回30分までの無料相談には料金はかかりません。お客様のケースに合わせた見積もりを提示し、ご納得いただいてから正式契約となります。",
+                "faq-q3": "自分で一度不許可になったビザの再申請は可能ですか？",
+                "faq-a3": "はい、可能です。一度入国管理局より出された「不許可通知」を持参いただき、不許可になった具体的な理由を分析した上で、修正・再申請計画を立てることが当事務所の強みです。",
+                "profile-name": "鈴木 誠",
+                "profile-title": "代表行政書士 / 申請取次資格保有",
+                "about-header": "あなたの夢の実現を、行政のパートナーとして支えます。",
+                "about-text-1": "私は長年にわたり、日本国内外の個人事業主様や、日本で新たな生活をスタートさせようとしている数多くの外国人の方々の手続きを代行してきました。複雑な官公庁の書類は時間と精神を浪費させます。法律の専門知識を提供し、あなたが本来力を入れたい活動に集中できるようにするのが私の役目です。",
+                "about-text-2": "日本への移住計画、起業プランなど、最初の一歩はとても大きな不安が伴います。まずはメールやオンラインでお気軽にお声がけください。誠心誠意、サポートさせていただきます。",
+                "about-meta-lang": "対応可能言語",
+                "about-meta-lang-val": "日本語、英語、ドイツ語",
+                "about-meta-assoc": "所属団体",
+                "about-meta-assoc-val": "愛知県行政書士会 所属",
+                "contact-title": "無料お気軽相談",
+                "contact-sub": "送信いただいたご相談内容に基づき、24時間以内に折り返しご連絡いたします。",
+                "alert-success-title": "送信に成功しました！",
+                "alert-success-desc": "お問い合わせありがとうございます。内容を確認の上、速やかに担当者よりご連絡いたします。",
+                "form-name": "お名前 (必須)",
+                "form-email": "メールアドレス (必須)",
+                "form-message": "ご相談内容 (任意)",
+                "form-submit": "メッセージを送信する",
+                "footer-desc": "法令遵守と高い倫理観に基づき、安心の日本滞在、起業支援をお約束いたします。",
+                "footer-contact-header": "お問い合わせ先",
+                "footer-location-header": "所在地",
+                "form-placeholder": "ご相談になりたい手続きや、ご質問を詳しくご記入ください..."
+            },
+            de: {
+                "logo-title": "Anwaltskanzlei Suzuki",
+                "logo-sub": "Suzuki Staatlich Geprüfter Verwaltungsjurist",
+                "nav-services": "Dienstleistungen",
+                "nav-calc": "Gebührenrechner",
+                "nav-faq": "FAQ",
+                "nav-about": "Über uns",
+                "hero-tag": "Experte für Visum, Firmengründung & Behördengänge",
+                "hero-title": "Ihre Zukunft in Japan beginnt mit rechtlicher Sicherheit.",
+                "hero-desc": "Wir machen komplizierte Behördengänge in Japan einfach. Beratung auf Deutsch und Englisch.",
+                "hero-btn-primary": "Jetzt gratis beraten lassen",
+                "hero-btn-secondary": "Leistungen ansehen",
+                "services-title": "Unsere Kernbereiche",
+                "service-1-title": "Visum & Aufenthalt",
+                "service-1-desc": "Arbeitsvisum, Ehegattenvisum, Daueraufenthalt (PR) oder Einbürgerung. Wir begleiten Sie durch den gesamten Zuwanderungsprozess.",
+                "service-2-title": "Firmengründung in Japan",
+                "service-2-desc": "Erstellung von Statuten, Gründung von Kabushiki-Kaisha (AG) oder Godo-Kaisha (GmbH) sowie das Gründer-Visum.",
+                "service-3-title": "Gewerbelizenzen & Verträge",
+                "service-3-desc": "Beschaffung notwendiger Bewilligungen (Gastronomie, Bauwesen, etc.) und rechtssichere Vertragsgestaltung auf Japanisch/Englisch.",
+                "calc-title": "Online-Gebührenrechner",
+                "calc-sub": "Wählen Sie Ihre gewünschten Leistungen aus, um sofort eine grobe Kostenschätzung zu erhalten.",
+                "calc-header-options": "Verfahren auswählen",
+                "calc-opt-1-title": "Visumsantrag (Zuzug / Statuswechsel)",
+                "calc-opt-1-desc": "Ab ¥100.000 / ca. 650 €",
+                "calc-opt-2-title": "Firmengründung in Japan",
+                "calc-opt-2-desc": "Ab ¥150.000 / ca. 950 €",
+                "calc-opt-3-title": "Gewerbebewilligung (Gastronomie, etc.)",
+                "calc-opt-3-desc": "Ab ¥80.000 / ca. 500 €",
+                "calc-opt-4-title": "Erstberatung (Persönlich / Online, 1 Std.)",
+                "calc-opt-4-desc": "¥10.000 / ca. 65 €",
+                "calc-result-title": "Geschätzte Kosten",
+                "calc-disclaimer": "*Dies ist eine unverbindliche Kostenschätzung für die reinen Anwaltsgebühren. Je nach Einzelfall, behördlichen Abgaben oder Übersetzungskosten kann sich der Endpreis anpassen.",
+                "calc-btn": "Kostenvoranschlag anfordern",
+                "faq-title": "Häufig gestellte Fragen (FAQ)",
+                "faq-q1": "Können die Beratungen auch auf Deutsch durchgeführt werden?",
+                "faq-a1": "Ja, absolut. Unsere Juristen sprechen Deutsch und Englisch. Wir wickeln sämtlichen Schriftverkehr, die Übersetzung und die Koordination mit den Behörden für Sie in Ihrer Sprache ab.",
+                "faq-q2": "Fallen vor der eigentlichen Beauftragung Kosten an?",
+                "faq-a2": "Nein. Die Kontaktaufnahme per E-Mail sowie die ersten 30 Minuten der Erstberatung sind vollkommen kostenlos und unverbindlich. Erst nach Annahme des schriftlichen Angebots entstehen Gebühren.",
+                "faq-q3": "Helfen Sie mir, wenn mein Visumsantrag bereits abgelehnt wurde?",
+                "faq-a3": "Ja. Eine unserer Kernspezialisierungen ist die Analyse von Ablehnungsbescheiden. Wir korrigieren die Fehler, arbeiten eine Gegenbegründung aus und reichen einen neuen Antrag ein.",
+                "profile-name": "Makoto Suzuki",
+                "profile-title": "Verwaltungsjurist / Lizenzierter Visa-Agent",
+                "about-header": "Ihr Brückenkopf zu den japanischen Behörden.",
+                "about-text-1": "Seit vielen Jahren unterstütze ich internationale Unternehmer und Privatpersonen dabei, die Hürden der japanischen Bürokratie erfolgreich zu meistern. Die Anforderungen der Verwaltung sind extrem detailorientiert. Mein Ziel ist es, Ihnen diese Last abzunehmen, damit Sie sich voll auf Ihre Arbeit und Ihr Leben in Japan konzentrieren können.",
+                "about-text-2": "Eine Firmengründung oder ein Umzug nach Japan ist ein großes Abenteuer. Gerne berate ich Sie in einem ersten Zoom- oder Skype-Gespräch, um Unklarheiten im Vorfeld auszuräumen.",
+                "about-meta-lang": "Arbeitssprachen",
+                "about-meta-lang-val": "Japanisch, Englisch, Deutsch",
+                "about-meta-assoc": "Zulassung",
+                "about-meta-assoc-val": "Mitglied der Gyoseishoshi-Kammer Aichi",
+                "contact-title": "Kostenlose Erstberatung",
+                "contact-sub": "Schreiben Sie uns Ihr Anliegen. Wir antworten in der Regel innerhalb von 24 Stunden.",
+                "alert-success-title": "Nachricht erfolgreich gesendet!",
+                "alert-success-desc": "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich mit Ihnen in Verbindung setzen.",
+                "form-name": "Name (Pflichtfeld)",
+                "form-email": "E-Mail-Adresse (Pflichtfeld)",
+                "form-message": "Ihr Anliegen (Optional)",
+                "form-submit": "Anfrage absenden",
+                "footer-desc": "Professioneller Rechts- und Übersetzungsservice für Zuwanderung und Firmengründung in Japan.",
+                "footer-contact-header": "Kontakt",
+                "footer-location-header": "Standort",
+                "form-placeholder": "Beschreiben Sie kurz Ihr Vorhaben, z.B. welches Visum Sie benötigen oder welche Firma Sie gründen möchten..."
+            }
+        };
+
+        // Initialize elements based on active language
+        function renderLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (dictionary[currentLang][key]) {
+                    element.innerHTML = dictionary[currentLang][key];
+                }
             });
+
+            // Adjust language buttons text
+            const btnText = document.getElementById('langBtnText');
+            if (currentLang === 'ja') {
+                btnText.textContent = "DE 🇩🇪 / EN";
+                document.getElementById('message').placeholder = "ご相談になりたい手続きや、ご質問を詳しくご記入ください...";
+            } else {
+                btnText.textContent = "JP 🇯🇵";
+                document.getElementById('message').placeholder = "Beschreiben Sie kurz Ihr Vorhaben, z.B. welches Visum Sie benötigen...";
+            }
+
+            // Recalculate fees with current currency notation
+            calculateFee();
         }
 
-        // Reset inputs
-        e.target.reset();
-        calculateFee();
+        function toggleLanguage() {
+            currentLang = currentLang === 'ja' ? 'de' : 'ja';
+            localStorage.setItem('lang', currentLang);
+            renderLanguage();
+        }
 
-        // Hide alert after 8 seconds
-        setTimeout(() => {
-            alertBox.classList.add('hidden');
-        }, 8000);
-    }
+        // Accordion (FAQ) Logic
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faq-a-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
 
-    // Run translation system immediately on load
-    window.addEventListener('DOMContentLoaded', () => {
-        renderLanguage();
-    });
-</script>
+        // Live Cost Estimator Pricing Calculator
+        function calculateFee() {
+            let total = 0;
+            const checkboxes = document.querySelectorAll('#calculator input[type="checkbox"]');
+            
+            checkboxes.forEach(box => {
+                if (box.checked) {
+                    total += parseInt(box.value);
+                }
+            });
+
+            const priceDisplay = document.getElementById('priceDisplay');
+            if (currentLang === 'ja') {
+                priceDisplay.textContent = `¥${total.toLocaleString()}`;
+            } else {
+                // Converting JPY equivalent roughly to EUR for European audiences (e.g., 1 EUR ~ 150 JPY)
+                const eurEquivalent = Math.round(total / 150);
+                priceDisplay.textContent = `ca. ${eurEquivalent.toLocaleString()} € (¥${total.toLocaleString()})`;
+            }
+        }
+
+        // Copy calculated estimate into Contact form
+        function applyEstimateToContact() {
+            const checkboxes = document.querySelectorAll('#calculator input[type="checkbox"]');
+            let selectedServices = [];
+            
+            checkboxes.forEach(box => {
+                if (box.checked) {
+                    // Match visual text description
+                    const labelText = box.nextElementSibling.querySelector('p').textContent;
+                    selectedServices.push(labelText);
+                }
+            });
+
+            const messageTextarea = document.getElementById('message');
+            if (selectedServices.length > 0) {
+                if (currentLang === 'ja') {
+                    messageTextarea.value = `【シミュレーターからの見積もり依頼】\n選択した手続き:\n- ${selectedServices.join('\n- ')}\n\n【詳細事項】\n`;
+                } else {
+                    messageTextarea.value = `[Anfrage über Online-Gebührenrechner]\nAusgewählte Services:\n- ${selectedServices.join('\n- ')}\n\n[Details / Sonstiges]:\n`;
+                }
+                
+                // Focus user automatically on the form
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                messageTextarea.focus();
+            } else {
+                alert(currentLang === 'ja' ? '手続きを1つ以上選択してください。' : 'Bitte wählen Sie mindestens ein Verfahren aus.');
+            }
+        }
+
+        // Form Submit handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            // Show alert box
+            const alertBox = document.getElementById('successAlert');
+            alertBox.classList.remove('hidden');
+            
+            // Scroll smoothly to success alert
+            alertBox.scrollIntoView({ behavior: 'smooth' });
+
+            // Tracking event custom trigger in Google Analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'contact_form_submission', {
+                    'language': currentLang,
+                    'estimate_value': document.getElementById('priceDisplay').textContent
+                });
+            }
+
+            // Reset inputs
+            e.target.reset();
+            calculateFee();
+
+            // Hide alert after 8 seconds
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 8000);
+        }
+
+        // Run translation system immediately on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderLanguage();
+        });
+    </script>
+</body>
+</html>
